@@ -1,0 +1,41 @@
+.tutorial {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tutorial-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 100px;
+}
+
+.tutorial-title {
+  font-size: 35px;
+  font-weight: 900;
+}
+
+.tutorial-btn {
+  background-color: #000;
+  color: #fff;
+  font-size: 25px;
+  border-radius: 5px;
+  padding: 5px 15px;
+  margin: 0 5px;
+}
+
+.tutorial-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.maintitle-top {
+  font-size: 60px;
+  font-weight: 600;
+}
