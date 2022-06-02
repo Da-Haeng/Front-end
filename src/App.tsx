@@ -7,15 +7,20 @@ import {
   BrowserRouter,
 } from "react-router-dom";
 import Tutorial from "./StartPage/Tutorial";
+import Start from "./StartPage/Start";
+import Login from "./StartPage/Login";
 
 function App() {
   return (
-    <Tutorial />
-    // <BrowserRouter>
-    //   <Routes>
-    //     <Route path="/project_list" element={<ProjectList />}></Route>
-    //   </Routes>
-    // </BrowserRouter>
+    <>
+    <BrowserRouter>
+      <Routes>
+        {/* <Route path="/project_list" element={<ProjectList />}></Route> */}
+        <Route path="/" element={<Tutorial/>}></Route>
+        <Route path="/start" element={<Start/>}></Route>
+        <Route path="/login" element={<Login/>}></Route>
+      </Routes>
+    </BrowserRouter></>
   );
 }
 

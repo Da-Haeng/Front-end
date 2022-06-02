@@ -25,3 +25,10 @@
   z-index: 1;
   text-align: center;
 }
+
+:root {
+  --mint: #cfffe5;
+  --pink: #ff9887;
+  --gray: #717171;
+  --box-shadow: 2px 2px 10px silver;
+}

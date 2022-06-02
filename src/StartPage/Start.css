@@ -1,0 +1,114 @@
+.tutorial {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .tutorial-content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 300px;
+
+  }
+  .tutorial-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 100px;
+  }
+  .loginBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+.maintitle-top {
+    font-size: 60px;
+    font-weight: 600;
+  }
+  .tutorial-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .tutorial-start {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .btn-social{
+      width: 500px;
+      height: 70px;
+      background-color: white;
+      border-radius: 10px;
+      border: 0;
+      box-shadow: var(--box-shadow);
+      font-size: 22px;
+      font-weight: 600;
+      font-style: bold;
+      margin-bottom: 10px;
+      margin-top: 10px;
+  }
+  .inputBox{
+    width: 500px;
+    height: 70px;
+    background-color: #F6F6F6;
+    border-radius: 10px;
+    border: 2px solid #7BA2C7;
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 20px;
+}
+.inputNextBox{
+    width: 500px;
+    height: 70px;
+    background-color: #F6F6F6;
+    border-radius: 10px;
+    border: 2px solid #8A3A00;
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 20px;
+}
+.emailBtn{
+    width: 500px;
+    height: 70px;
+    background-color: #FFEAEA;
+    border-radius: 10px;
+    border: 2px solid #FF0000;
+    font-size: 20px;
+    color: #FF0000;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 10px;
+}
+.emailFinishBtn{
+    width: 500px;
+    height: 70px;
+    background-color: #C5DFF6;
+    border-radius: 10px;
+    border: 2px solid #00499E;
+    font-size: 20px;
+    color: #00499E;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 10px;
+}
+.getStart{
+    width: 500px;
+    height: 70px;
+    background-color: #FFC977;
+    border-radius: 10px;
+    border: 2px solid #8A3A00;
+    font-size: 20px;
+    color: #8A3A00;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 10px;
+}

@@ -1,7 +1,6 @@
-import React from "react";
-import "./Login.css";
-const Login = () => {
-    return (
+import "./Start.css";
+const Start = () => {
+    return(
         <div className="tutorial">
             <div className="tutorial-header">
             <span className="tutorial-title">DA:HAENG</span>
@@ -17,15 +16,21 @@ const Login = () => {
                 <span className="maintitle-top">시작하기</span>
                 <br></br>
                 <div className="loginBox">
-                    <button className="btn-social"><img className="social-img" src="image/google.png" />구글로 시작하기</button>
+                    <button className="btn-social">구글로 시작하기</button>
                     <button className="btn-social">네이버로 시작하기</button>
                 </div>
-                <br></br>
                 <div className="loginBox">
                     <input className="inputBox" placeholder="이메일을 입력하세요"></input>
-                    <input className="inputBox" placeholder="비밀번호를 입력하세요"></input>
-                    <a style={{color:"grey"}}>비밀번호 찾기</a>
-                    <button className="loginBtn">로그인 하기</button>
+                    <button className="emailBtn">이메일로 인증하기</button>
+                    <input className="inputBox" placeholder="인증코드를 입력하세요"></input>
+                    <button className="emailFinishBtn">인증완료 하기</button>
+                </div>
+                <div className="loginBox">
+                    <span className="maintitle-top">인증완료</span>
+                    <input className="inputNextBox" placeholder="닉네임을 입력하세요"></input>
+                    <input className="inputNextBox" placeholder="비밀번호를 입력하세요"></input>
+                    <input className="inputNextBox" placeholder="비밀번호 확인"></input>
+                    <button className="getStart">시작하기</button>
                 </div>
             </div>
 
@@ -33,4 +38,5 @@ const Login = () => {
         </div>
     )
 }
-export default Login;
+
+export default Start;
