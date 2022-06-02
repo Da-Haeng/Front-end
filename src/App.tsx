@@ -7,15 +7,14 @@ import {
   BrowserRouter,
 } from "react-router-dom";
 import Tutorial from "./StartPage/Tutorial";
+import SideBar from "./CommonPage/SideBar/SideBar";
 
 function App() {
   return (
-    <Tutorial />
-    // <BrowserRouter>
-    //   <Routes>
-    //     <Route path="/project_list" element={<ProjectList />}></Route>
-    //   </Routes>
-    // </BrowserRouter>
+    <BrowserRouter>
+      <SideBar />
+      {/* <Tutorial /> */}
+    </BrowserRouter>
   );
 }
 

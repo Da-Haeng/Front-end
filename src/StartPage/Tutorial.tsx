@@ -12,9 +12,11 @@ function Tutorial() {
         </div>
       </div>
       <div className="tutorial-main">
-        <span className="maintitle-top">너와 함께여서 다행이야</span>
-        <span className="maintitle-bottom">모든 공유의 시작</span>
-        <span>모든 계획과 기록을 손쉽게 공유해보세요.</span>
+        <span className="tutorial-maintitle">너와 함께여서 다행이야</span>
+        <span className="tutorial-maintitle">모든 공유의 시작</span>
+        <span className="tutorial-subtitle">
+          모든 계획과 기록을 손쉽게 공유해보세요.
+        </span>
         <img className="tutorial-img" src="image/tutorial.png" />
       </div>
     </div>

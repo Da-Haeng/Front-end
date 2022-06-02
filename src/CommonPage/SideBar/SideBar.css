@@ -1,0 +1,62 @@
+.sidebar {
+  display: flex;
+  width: 180px;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fbfbfb;
+  position: absolute;
+  left: 0;
+  padding: 40px 0;
+}
+
+.sidebar-profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.profile-name {
+  font-size: 30px;
+  color: #fff;
+  background-color: #ff5c00;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 58px;
+}
+
+.profile-info {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.profile-info-top {
+  margin-top: 20px;
+}
+
+.sidebar-btn-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar-btn {
+  background-color: #e6e6e6;
+  font-size: 28px;
+  padding: 11px;
+  border-radius: 12px;
+  margin: 15px 0;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.faCog,
+.faBell,
+.faSignOut {
+  width: 31px;
+}

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
 
 * {
   box-sizing: border-box;
@@ -6,22 +6,12 @@
   padding: 0;
   font-family: "Noto Sans KR", sans-serif;
   text-decoration: none;
-  color: #000;
   list-style: none;
 }
 
-.App {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.heading {
-  text-transform: uppercase;
-  font-size: 40px;
-  margin: 30px 0;
-  z-index: 1;
-  text-align: center;
+:root {
+  --mint: #cfffe5;
+  --pink: #ff9887;
+  --gray: #717171;
+  --box-shadow: 2px 2px 10px silver;
 }
