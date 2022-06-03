@@ -5,12 +5,12 @@
     align-items: center;
   }
   .tutorial-content {
-    width: 100%;
-    display: flex;
+    width: 100% !important;
+    /* display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    padding: 30px 300px;
+    justify-content: space-between; */
+    padding: 30px 100px;
 
   }
   .tutorial-header {
@@ -18,32 +18,55 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 50px 100px;
+    padding: 40px 100px;
+  }
+  .tutorial-maintitle {
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 120%;
+  }
+  .tutorial-subtitle {
+    color: var(--gray);
+    font-size: 23px;
+    margin-top: 25px;
   }
   .loginBox{
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-.maintitle-top {
-    font-size: 60px;
-    font-weight: 600;
-  }
   .tutorial-main {
-    display: flex;
-    justify-content: center;
+    padding: 30px;
+    width: 50%;
     align-items: center;
-    flex-direction: column;
+    float: left;
   }
-  .tutorial-start {
+  .tutorial-start{
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+    width: 50%;
+    align-items: center;
+    float: right;
+    
+  }
+  @media ( max-width: 500px ) {
+    .tutorial {
+      width: auto;
+    }
+    .tutorial-main {
+      float: none;
+      width: auto;
+    }
+    .tutorial-start {
+      float: none;
+      width: auto;
+    }
   }
   .btn-social{
-      width: 500px;
-      height: 70px;
+      width: 400px;
+      height: 60px;
       background-color: white;
       border-radius: 10px;
       border: 0;
@@ -51,12 +74,22 @@
       font-size: 22px;
       font-weight: 600;
       font-style: bold;
-      margin-bottom: 10px;
-      margin-top: 10px;
+      margin-bottom: 10px !important;
+      margin-top: 10px !important;
+  }
+  .google-img{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+  .naver-img{
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
   }
   .inputBox{
-    width: 500px;
-    height: 70px;
+    width: 400px;
+    height: 60px;
     background-color: #F6F6F6;
     border-radius: 10px;
     border: 2px solid #7BA2C7;
@@ -66,8 +99,8 @@
     padding: 20px;
 }
 .inputNextBox{
-    width: 500px;
-    height: 70px;
+    width: 400px;
+    height: 60px;
     background-color: #F6F6F6;
     border-radius: 10px;
     border: 2px solid #8A3A00;
@@ -77,8 +110,8 @@
     padding: 20px;
 }
 .emailBtn{
-    width: 500px;
-    height: 70px;
+    width: 400px;
+    height: 60px;
     background-color: #FFEAEA;
     border-radius: 10px;
     border: 2px solid #FF0000;
@@ -89,8 +122,8 @@
     padding: 10px;
 }
 .emailFinishBtn{
-    width: 500px;
-    height: 70px;
+    width: 400px;
+    height: 60px;
     background-color: #C5DFF6;
     border-radius: 10px;
     border: 2px solid #00499E;
@@ -101,8 +134,8 @@
     padding: 10px;
 }
 .getStart{
-    width: 500px;
-    height: 70px;
+    width: 400px;
+    height: 60px;
     background-color: #FFC977;
     border-radius: 10px;
     border: 2px solid #8A3A00;

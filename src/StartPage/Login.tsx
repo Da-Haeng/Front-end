@@ -8,17 +8,17 @@ const Login = () => {
             </div>
             <div className="tutorial-content">
             <div className="tutorial-main">
-                <span className="maintitle-top">너와 함께여서 다행이야</span>
-                <span className="maintitle-top">모든 공유의 시작</span>
-                <span>모든 계획과 기록을 손쉽게 공유해보세요.</span>
+                <span className="tutorial-maintitle">너와 함께여서 다행이야</span>
+                <span className="tutorial-maintitle">모든 공유의 시작</span>
+                <span className="tutorial-subtitle">모든 계획과 기록을 손쉽게 공유해보세요.</span>
                 <img className="tutorial-img" src="image/tutorial.png" />
             </div>
             <div className="tutorial-start">
-                <span className="maintitle-top">시작하기</span>
+                <span className="tutorial-maintitle">시작하기</span>
                 <br></br>
                 <div className="loginBox">
-                    <button className="btn-social"><img className="social-img" src="image/google.png" />구글로 시작하기</button>
-                    <button className="btn-social">네이버로 시작하기</button>
+                    <button className="btn-social"><img className="google-img" src="image/google.png" />구글로 시작하기</button>
+                    <button className="btn-social"><img className="naver-img" src="image/naver-icon-file.png" />네이버로 시작하기</button>
                 </div>
                 <br></br>
                 <div className="loginBox">
