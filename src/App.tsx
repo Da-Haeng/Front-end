@@ -13,14 +13,15 @@ import Login from "./StartPage/Login";
 function App() {
   return (
     <>
-    <BrowserRouter>
-      <Routes>
-        {/* <Route path="/project_list" element={<ProjectList />}></Route> */}
-        <Route path="/" element={<Tutorial/>}></Route>
-        <Route path="/start" element={<Start/>}></Route>
-        <Route path="/login" element={<Login/>}></Route>
-      </Routes>
-    </BrowserRouter></>
+      <BrowserRouter>
+        <Routes>
+          {/* <Route path="/project_list" element={<ProjectList />}></Route> */}
+          <Route path="/" element={<Tutorial />}></Route>
+          <Route path="/start" element={<Start />}></Route>
+          <Route path="/login" element={<Login />}></Route>
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 

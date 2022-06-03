@@ -1,9 +1,14 @@
+import React from "react";
 import "./Start.css";
+import { Link } from "react-router-dom";
+
 const Start = () => {
   return (
     <div className="tutorial">
       <div className="tutorial-header">
-        <span className="tutorial-title">DA:HAENG</span>
+        <Link to="/" className="tutorial-title">
+          DA:HAENG
+        </Link>
       </div>
       <div className="tutorial-content">
         <div className="tutorial-main">

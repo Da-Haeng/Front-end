@@ -16,14 +16,15 @@
 .tutorial-title {
   font-size: 33px;
   font-weight: 700;
+  color: #000;
 }
 
 .tutorial-btn {
   background-color: #000;
   color: #fff;
-  font-size: 23px;
+  font-size: 22px;
   border-radius: 5px;
-  padding: 5px 20px;
+  padding: 9px 30px;
   margin: 0 5px;
 }
 
@@ -43,11 +44,11 @@
 
 .tutorial-subtitle {
   color: var(--gray);
-  font-size: 23px;
+  font-size: 22px;
   margin-top: 25px;
 }
 
 .tutorial-img {
-  width: 80%;
-  margin-top: 50px;
+  width: 55%;
+  margin-top: 30px;
 }

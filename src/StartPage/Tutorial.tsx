@@ -6,10 +6,16 @@ function Tutorial() {
   return (
     <div className="tutorial">
       <div className="tutorial-header">
-        <span className="tutorial-title">DA:HAENG</span>
+        <Link to="/" className="tutorial-title">
+          DA:HAENG
+        </Link>
         <div className="header-button">
-          <button className="tutorial-btn">시작하기</button>
-          <button className="tutorial-btn">로그인</button>
+          <Link to="/start" className="tutorial-btn">
+            시작하기
+          </Link>
+          <Link to="/login" className="tutorial-btn">
+            로그인
+          </Link>
         </div>
       </div>
       <div className="tutorial-main">
