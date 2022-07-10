@@ -9,6 +9,7 @@ import {
 import Tutorial from "./StartPage/Tutorial";
 import Start from "./StartPage/Start";
 import Login from "./StartPage/Login";
+import MainPage from "./MainPage/Main";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/" element={<Tutorial />}></Route>
           <Route path="/start" element={<Start />}></Route>
           <Route path="/login" element={<Login />}></Route>
+          <Route path="/main" element={<MainPage />}></Route>
         </Routes>
       </BrowserRouter>
     </>
