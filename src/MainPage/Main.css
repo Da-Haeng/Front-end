@@ -1,0 +1,151 @@
+.main {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.main-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  margin-left: 180px;
+  flex-direction: column;
+  padding: 60px 100px;
+}
+
+.main-title {
+  font-size: 33px;
+  font-weight: 800;
+}
+
+.main-memolist {
+  display: grid;
+  grid-template-columns: 390px 390px 390px;
+  grid-template-rows: 220px 220px 220px;
+  width: 80%;
+  margin-top: 60px;
+  margin-left: 30px;
+}
+
+.main-memo {
+  display: flex;
+  width: 340px;
+  height: 190px;
+  padding: 25px 22px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f3f3f3;
+  border-radius: 14px;
+  padding-bottom: 20px;
+}
+
+.main-memotitle {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+}
+
+.main-memotitle-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-left: 10px;
+}
+
+.main-memotitle-left span {
+  font-size: 17px;
+  font-weight: 700;
+  margin-right: 8px;
+}
+
+.pencil-icon {
+  font-size: 15px;
+  opacity: 0.5;
+}
+
+.main-memotitle-right {
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+  background-color: #e48c8c;
+  border-radius: 50%;
+}
+
+.main-memocontext {
+  display: flex;
+  width: 100%;
+  height: 80%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-left: 25px;
+}
+
+.main-memodate,
+.main-memointro {
+  margin-bottom: 3px;
+  background-color: transparent;
+  border: none;
+  font-size: 14px;
+  font-weight: 400;
+  opacity: 0.8;
+  width: 100%;
+}
+
+.main-memodate:focus,
+.main-memointro:focus {
+  outline: none;
+}
+
+.main-memodate::placeholder,
+.main-memointro::placeholder {
+  color: #292929;
+}
+
+.main-memobottom {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5px;
+}
+
+.main-memomember span {
+  font-size: 12px;
+  font-weight: 400;
+  background-color: #e48c8c;
+  padding: 5px 8px;
+  border-radius: 50%;
+  text-align: center;
+  margin: 2px;
+}
+
+.trash-icon {
+  font-size: 15px;
+  opacity: 0.5;
+}
+
+.mem2-1,
+.mem2-2 span {
+  background-color: #a7bfe2;
+}
+
+.mem3-1,
+.mem3-2 span {
+  background-color: #fae362;
+}
+.mem4-1,
+.mem4-2 span {
+  background-color: #d6b4de;
+}
+
+.memo-plus {
+  font-size: 35px;
+  font-weight: 700;
+}
