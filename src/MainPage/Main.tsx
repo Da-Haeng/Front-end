@@ -167,6 +167,9 @@ const MainPage = () => {
           </div>
         </div>
       </div>
+      <div className="right_col">
+        {/* <button className="addTodo"> + </button> */}
+      </div>
     </div>
   );
 };

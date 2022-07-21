@@ -10,6 +10,30 @@ import Tutorial from "./StartPage/Tutorial";
 import Start from "./StartPage/Start";
 import Login from "./StartPage/Login";
 import MainPage from "./MainPage/Main";
+import TodoTemplete, { todos } from "./MainPage/TodoList/TodoTemplete";
+
+const todoData = [
+  {
+      id: 1,
+      todo: '메모장 만들기',
+      done: false
+  },
+  {
+      id: 2,
+      todo: '리액트 공부하기',
+      done: false
+  },
+  {
+      id: 3,
+      todo: '커밋하기',
+      done: false
+  },
+  {
+    id: 4,
+    todo: '공부',
+    done: false
+}
+]
 
 function App() {
   return (
@@ -21,6 +45,7 @@ function App() {
           <Route path="/start" element={<Start />}></Route>
           <Route path="/login" element={<Login />}></Route>
           <Route path="/main" element={<MainPage />}></Route>
+          <Route path="/todo" element={<TodoTemplete todoData={todoData} />}></Route>
         </Routes>
       </BrowserRouter>
     </>

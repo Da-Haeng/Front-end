@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300&family=Noto+Sans+KR&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300&family=Nanum+Gothic&family=Noto+Sans+KR&display=swap');
+
+/* Todo Templete */
+.TodoTemplete {
+    width: 360px;
+    height: 450px;
+    position: relative;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.04);
+    margin: 0 auto;
+    margin-top: 96px;
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    font-family: 'Nanum Gothic';
+}
+.TodoTemplete .todo_create_form form{
+    /* background: #f8f9fa; */
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    border-top: 1px solid #e9ecef;
+}
+.TodoTemplete .todo_create_form form > input {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #dee2e6;
+    width: 100%;
+    outline: none;
+    font-size: 18px;
+    box-sizing: border-box;
+}
+.TodoTemplete .todo_create_btn {
+    background: #38d9a9;
+    z-index: 5;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    transform: translate(-50%, 50%);
+    color: white;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.125s all ease-in;
+    font-size: 40px;
+}
+/* Todo Header */
+
+.TodoHeader {
+    padding-top: 25px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-bottom: 1px solid #e9ecef;
+    display: flex;
+    align-items: center;
+}
+
+.TodoHeader .head_text {
+    width: 50%;
+    font-size: 25px;
+    justify-content: center;
+}
+.TodoHeader > div {
+    display: flex;
+}
+.TodoHeader .head_btn_left {
+    width:25%;
+    font-size: 25px;
+    justify-content: start;
+    margin: 0;
+}
+.TodoHeader .head_btn_right {
+    width: 25%;
+    font-size: 25px;
+    justify-content: end;
+    margin: 0;
+}
+.TodoHeader button {
+    font-family: 'Nanum Gothic';
+    background-color: #C5DFF6;
+    color: #00499E;
+    border-color: #00499E;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+/* Todo List */
+
+.TodoList {
+    flex: 1;
+    padding: 20px 32px;
+    padding-bottom: 48px;
+    overflow-y: auto;
+}
+
+/* Todo Item */
+.TodoItem {
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.TodoItem .todo {
+    flex: 1;
+    font-size: 18px;
+    color: #495057;
+    font-family: 'Nanum Gothic';
+}
+
+.TodoItem .todo_btn {
+    width: 28px;
+    height: 28px;
+    border-radius: 16px;
+    border: 1px solid #ced4da;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.TodoItem .remove_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #dee2e6;
+    font-size: 24px;
+    cursor: pointer;
+}
