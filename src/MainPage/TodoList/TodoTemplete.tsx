@@ -5,13 +5,16 @@ import TodoList from "./TodoList";
 import "./Todo.css";
 import TodoHeader from "./TodoHeader";
 import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
+import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 
 export type todos = {
   id: number;
   todo: string;
   done: boolean;
 };
-const reducer = (state , action: any) => {
+const reducer = (state, action: any) => {
   let newState = [];
   switch (action.type) {
     case "INIT": {
@@ -21,13 +24,36 @@ const reducer = (state , action: any) => {
       newState = [...state, action.data];
       break;
     }
+    case "REMOVE": {
+      newState = state.filter((it: { id: any; }) => it.id !== action.targetId);
+      break;
+    }
+    case "DONE": {
+      newState = state.map(it => {
+        if (it.id === action.targetId  && it.done === false) {
+          it.done = true;
+        }
+        return it;
+      });
+      break;
+    }
+    case "NOTDONE": {
+      newState = state.map(it => {
+        if (it.id === action.targetId  && it.done === true) {
+          it.done = false;
+        }
+        return it;
+      });
+      break;
+    }
     default:
-        return state;
+      return state;
   }
   return newState;
 };
 
 export const TodoStateContext = React.createContext<[]>([]);
+export const TodoDispatchContext = React.createContext<{}>({});
 const TodoTemplete = ({ todoData }) => {
   const [open, setOpen] = useState(true);
   const [todo, setTodo] = useState("");
@@ -61,22 +87,40 @@ const TodoTemplete = ({ todoData }) => {
     dataId.current += 1;
   };
 
+  const onRemove = (targetId: number) => {
+    dispatch({ type: "REMOVE", targetId });
+  };
+
+  const onDone = (targetId: number) => {
+    dispatch({ type: "DONE", targetId });
+  };
+  const onNotDone = (targetId: number) => {
+    dispatch({ type: "NOTDONE", targetId });
+  };
+
   return (
     <TodoStateContext.Provider value={data}>
-      <div className="TodoTemplete">
-        <TodoHeader />
-        <TodoList />
-        <div className="todo_create_form">
-          {open && (
-            <form onSubmit={onCreate}>
-              <input value={todo} onChange={(e) => setTodo(e.target.value)} placeholder="할 일을 입력 후, Enter를 누르세요"/>
-            </form>
-          )}
+      <TodoDispatchContext.Provider value={{ onRemove, onDone, onNotDone }}>
+        <div className="TodoTemplete">
+          <TodoHeader />
+          <TodoList />
+          <div className="todo_create_form">
+            {open && (
+              <form onSubmit={onCreate}>
+                <input
+                  value={todo}
+                  onChange={(e) => setTodo(e.target.value)}
+                  placeholder="할 일을 입력 후, Enter를 누르세요"
+                />
+              </form>
+            )}
+          </div>
+          <div className="todo_create_btn" onClick={onToggle}>
+            {open && <FontAwesomeIcon icon={faAngleDown} className="openAdd"/>}
+            {!open && <FontAwesomeIcon icon={faAngleUp} className="closeAdd"/>}
+          </div>
         </div>
-        <div className="todo_create_btn" onClick={onToggle}>
-            +
-        </div>
-      </div>
+      </TodoDispatchContext.Provider>
     </TodoStateContext.Provider>
   );
 };

@@ -33,7 +33,39 @@ const todoData = [
     todo: '공부',
     done: false
 }
-]
+];
+
+export type memo = {
+  id: number;
+  title: string;
+  date: string;
+  description: string;
+  color: number;
+};
+
+const memoData = [
+  {
+    id: 1,
+    title: "GO JEJU🌴",
+    date: "JULY 12 ~ JULY 15",
+    description: "제주 맛집 뿌시기 여행 :)",
+    color: 1,
+  },
+  {
+    id: 2,
+    title: "JAPAN🍜",
+    date: "MAY 25 ~ MAY 28",
+    info: "셤끝나고 일본 여행",
+    color: 2,
+  },
+  {
+    id: 3,
+    title: "NEWYORK🛫",
+    date: "NOVEMBER 1 ~ NOVEMBER 28",
+    info: "뉴욕 걸리버 여행기",
+    color: 3,
+  },
+];
 
 function App() {
   return (
@@ -44,7 +76,7 @@ function App() {
           <Route path="/" element={<Tutorial />}></Route>
           <Route path="/start" element={<Start />}></Route>
           <Route path="/login" element={<Login />}></Route>
-          <Route path="/main" element={<MainPage />}></Route>
+          <Route path="/main" element={<MainPage memoData={memoData}/>}></Route>
           <Route path="/todo" element={<TodoTemplete todoData={todoData} />}></Route>
         </Routes>
       </BrowserRouter>
