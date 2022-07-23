@@ -4,7 +4,6 @@ import SideBar from "../CommonPage/SideBar/SideBar";
 import "./Main.css";
 import MemoList from "./MemoList";
 import TodoTemplete from "./TodoList/TodoTemplete";
-import { todoData } from "../App";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClipboardList } from "@fortawesome/free-solid-svg-icons";
 import { faCalendarDays } from "@fortawesome/free-solid-svg-icons";
@@ -97,7 +96,7 @@ const MainPage = ({ memoData }) => {
                 onClick={() => setAddTodo(!addTodo)}
               />
             </div>
-            {addTodo && <TodoTemplete todoData={todoData} />}
+            {addTodo && <TodoTemplete />}
             <div className="openTodo">
               <FontAwesomeIcon icon={faCalendarDays} onClick={() => {}} />
             </div>

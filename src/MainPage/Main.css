@@ -259,8 +259,6 @@
   border-radius: 50px;
 }
 
-/* RightSide */
-
 .RightSide .openTodo {
   justify-content: end;
   background: #ff5c00;

@@ -6,8 +6,8 @@ import "./Todo.css";
 import TodoHeader from "./TodoHeader";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
-import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
+import { faCirclePlus } from "@fortawesome/free-solid-svg-icons";
+import { faCircleChevronUp } from "@fortawesome/free-solid-svg-icons";
 
 export type todos = {
   id: number;
@@ -49,28 +49,32 @@ const reducer = (state, action: any) => {
     default:
       return state;
   }
+  localStorage.setItem('todoData', JSON.stringify(newState));
   return newState;
 };
 
 export const TodoStateContext = React.createContext<[]>([]);
 export const TodoDispatchContext = React.createContext<{}>({});
-const TodoTemplete = ({ todoData }) => {
-  const [open, setOpen] = useState(true);
+const TodoTemplete = () => {
+  const [open, setOpen] = useState(false);
   const [todo, setTodo] = useState("");
   const [done, setDone] = useState(false);
   const onToggle = () => {
     setOpen(!open);
   };
 
-  const [data, dispatch] = useReducer(reducer, todoData);
+  const [data, dispatch] = useReducer(reducer, []);
 
   useEffect(() => {
-    if (data) {
-      dispatch({ type: "INIT", data: todoData });
+    const localData = localStorage.getItem('todoData');
+    if (localData) {
+      const todoList = JSON.parse(localData);
+      dataId.current = parseInt(todoList[0].id) + 1;
+      dispatch({ type: "INIT", data: todoList });
     }
   }, []);
 
-  const dataId = useRef(5);
+  const dataId = useRef(0);
 
   const onCreate = (e) => {
     e.preventDefault();
@@ -116,8 +120,8 @@ const TodoTemplete = ({ todoData }) => {
             )}
           </div>
           <div className="todo_create_btn" onClick={onToggle}>
-            {open && <FontAwesomeIcon icon={faAngleDown} className="openAdd"/>}
-            {!open && <FontAwesomeIcon icon={faAngleUp} className="closeAdd"/>}
+            {open && <FontAwesomeIcon icon={faCircleChevronUp} className="openToggle"/>}
+            {!open && <FontAwesomeIcon icon={faCirclePlus} className="openToggle"/>}
           </div>
         </div>
       </TodoDispatchContext.Provider>
