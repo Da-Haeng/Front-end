@@ -12,7 +12,7 @@ import Login from "./StartPage/Login";
 import MainPage from "./MainPage/Main";
 import TodoTemplete, { todos } from "./MainPage/TodoList/TodoTemplete";
 
-const todoData = [
+export const todoData = [
   {
       id: 1,
       todo: '메모장 만들기',
@@ -77,7 +77,7 @@ function App() {
           <Route path="/start" element={<Start />}></Route>
           <Route path="/login" element={<Login />}></Route>
           <Route path="/main" element={<MainPage memoData={memoData}/>}></Route>
-          <Route path="/todo" element={<TodoTemplete todoData={todoData} />}></Route>
+          {/* <Route path="/todo" element={<TodoTemplete todoData={todoData} />}></Route> */}
         </Routes>
       </BrowserRouter>
     </>

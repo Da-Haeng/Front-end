@@ -1,6 +1,6 @@
 import "./Todo.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import { faCaretUp } from "@fortawesome/free-solid-svg-icons";
 const TodoHeader = () => {
     return (
         <div className="TodoHeader">
@@ -11,7 +11,7 @@ const TodoHeader = () => {
 
                 </div>
                 <div className="head_btn_right">
-                    <FontAwesomeIcon icon={faXmark}/>
+                    <FontAwesomeIcon icon={faCaretUp}/>
                 </div>
         </div>
     )
