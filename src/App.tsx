@@ -12,29 +12,6 @@ import Login from "./StartPage/Login";
 import MainPage from "./MainPage/Main";
 import TodoTemplete, { todos } from "./MainPage/TodoList/TodoTemplete";
 
-export const todoData = [
-  {
-      id: 1,
-      todo: '메모장 만들기',
-      done: false
-  },
-  {
-      id: 2,
-      todo: '리액트 공부하기',
-      done: false
-  },
-  {
-      id: 3,
-      todo: '커밋하기',
-      done: false
-  },
-  {
-    id: 4,
-    todo: '공부',
-    done: false
-}
-];
-
 export type memo = {
   id: number;
   title: string;

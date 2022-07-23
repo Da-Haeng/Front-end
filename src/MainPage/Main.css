@@ -188,7 +188,7 @@
 
 /* RightSide */
 .RightSide {
-  
+  /* display: flex; */
 }
 
 .RightSide .openTodo {
