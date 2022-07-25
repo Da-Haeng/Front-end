@@ -1,8 +1,8 @@
 import { faPencil, faTrash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useContext, useState } from "react";
-import { MemoDispatchContext } from "./Main";
 import { useNavigate } from "react-router-dom";
+import { MemoDispatchContext } from "../App";
 import "./Main.css";
 
 const MemoItem = ({ id, title, date, description, color }: any) => {

@@ -1,10 +1,10 @@
 import { useContext } from "react";
-import { MemoDispatchContext, MemoStateContext } from "./Main";
 import MemoItem from "./MemoItem";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import "./Main.css";
 import { useEffect } from "react";
+import { MemoDispatchContext, MemoStateContext } from "../App";
 
 const MemoList = () => {
   const memoData = useContext(MemoStateContext);
