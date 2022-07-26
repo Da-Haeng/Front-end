@@ -1,8 +1,9 @@
 import { faPencil, faTrash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React from "react";
 import { useContext, useState } from "react";
-import { MemoDispatchContext } from "./Main";
 import { useNavigate } from "react-router-dom";
+import { MemoDispatchContext } from "../App";
 import "./Main.css";
 
 const MemoItem = ({ id, title, date, description, color }: any) => {
@@ -37,7 +38,6 @@ const MemoItem = ({ id, title, date, description, color }: any) => {
 
   const handleToggleColor = () => {
     isColor === true ? setColor(false) : setColor(true);
-    console.log(isColor);
   };
 
   const goDetail = () => {
@@ -45,8 +45,8 @@ const MemoItem = ({ id, title, date, description, color }: any) => {
   };
 
   return (
-    <div className="main-memo" onClick={goDetail}>
-      <div className="main-memotitle">
+    <div className="main-memo">
+      <div className="main-memotitle" onClick={goDetail}>
         {/* <span>{newTitle}</span> */}
         {isEdit === true ? (
           <div className="main-memotitle-left">
@@ -162,4 +162,4 @@ const MemoItem = ({ id, title, date, description, color }: any) => {
     </div>
   );
 };
-export default MemoItem;
+export default React.memo(MemoItem);

@@ -1,0 +1,54 @@
+.DetailPage {
+  /* display: flex; */
+  width: 100vw;
+  min-height: 100%;
+  }
+
+  /* Header */
+  /* .DetailPage .memo-Header {
+    height: 20%;
+    width: 100%;
+  }
+  .DatailHeader {
+    padding: 20px;
+    margin-left: 190px;
+  } */
+  .DetailPage .side-menu {
+    position: relative;
+    width: 10%;
+    float: left;
+  }
+  .DetailPage .memo-container {
+    display: flex;
+    width: 90%;
+    height: 100%;
+    flex-direction: column;
+    float: right;
+    position: relative;
+  }
+.memo-container .memo-Header {
+  height: 20%;
+  width: 100%;
+}
+.DatailHeader {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 10px;
+  justify-content: space-between;
+}
+.DatailHeader h2 {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.DatailHeader .memo-setting {
+  margin-right: 15px;
+  margin-top: 10px;
+  font-size: 24px;
+}
+.memo-container .memo-content {
+  height: 80%;
+  margin-left: 180px;
+  margin-right: 180px;
+  padding: 130px 100px;
+}

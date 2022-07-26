@@ -1,10 +1,11 @@
 import { useContext } from "react";
-import { MemoDispatchContext, MemoStateContext } from "./Main";
 import MemoItem from "./MemoItem";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import "./Main.css";
 import { useEffect } from "react";
+import { MemoDispatchContext, MemoStateContext } from "../App";
+import React from "react";
 
 const MemoList = () => {
   const memoData = useContext(MemoStateContext);
@@ -25,4 +26,4 @@ const MemoList = () => {
     </div>
   );
 };
-export default MemoList;
+export default React.memo(MemoList);

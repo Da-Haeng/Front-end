@@ -5,8 +5,10 @@ import { faBell } from "@fortawesome/free-solid-svg-icons";
 import { faSignOut } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./SideBar.css";
+import { useNavigate } from "react-router-dom";
 
 function SideBar() {
+  const navigate = useNavigate();
   return (
     <div className="sidebar">
       <div className="sidebar-profile">
@@ -16,7 +18,7 @@ function SideBar() {
       </div>
       <div className="sidebar-btn-top">
         <span>
-          <FontAwesomeIcon icon={faHome} className="sidebar-btn" />
+          <FontAwesomeIcon icon={faHome} className="sidebar-btn" onClick={()=> navigate("/main")}/>
         </span>
         <FontAwesomeIcon icon={faCog} className="sidebar-btn faCog" />
         <FontAwesomeIcon icon={faBell} className="sidebar-btn faBell" />
