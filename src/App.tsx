@@ -78,9 +78,9 @@ const reducer = (state: any, action: any) => {
 export const MemoStateContext = React.createContext<[]>([]);
 export const MemoDispatchContext = React.createContext<{}>({});
 
-
 function App() {
   const [data, dispatch] = useReducer(reducer, memoData);
+
   const dataId = useRef(4);
 
   useEffect(() => {

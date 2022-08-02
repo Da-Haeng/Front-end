@@ -22,13 +22,15 @@ const MemoItem = ({ id, title, date, description, color }: any) => {
     onRemove(id);
   };
 
-  const handleEdit = () => {
+  const handleEdit = (event) => {
     isEdit === true ? setEdit(false) : setEdit(true);
     onEdit(id, newTitle, newDate, newDescription, newColor);
+    event.stopPropagation();
   };
 
-  const handleToggleEdit = () => {
+  const handleToggleEdit = (event) => {
     isEdit === true ? setEdit(false) : setEdit(true);
+    event.stopPropagation();
   };
 
   const handleColor = (color) => {
@@ -45,8 +47,8 @@ const MemoItem = ({ id, title, date, description, color }: any) => {
   };
 
   return (
-    <div className="main-memo">
-      <div className="main-memotitle" onClick={goDetail}>
+    <div className="main-memo" onClick={goDetail}>
+      <div className="main-memotitle">
         {/* <span>{newTitle}</span> */}
         {isEdit === true ? (
           <div className="main-memotitle-left">
