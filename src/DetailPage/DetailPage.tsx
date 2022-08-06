@@ -27,6 +27,8 @@ const categoryItem = [
   //데이터 불러올 때 params id랑 category id 같은거만 불러오기
 ];
 
+
+
 const reducer = (state: any, action: any) => {
   let newState = [];
   switch (action.type) {

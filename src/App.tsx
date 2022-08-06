@@ -45,6 +45,22 @@ const memoData = [
   },
 ];
 
+// const contentData = [
+//   {
+//     categoryTitle: "DAY1", 
+//     id: 1, 
+//     mainId: 1,
+//     document: [
+//       {
+//         id: 1,
+//         text: "협재로 가서 숙소 체크인!",
+//         type: "h2",
+//         color: "black",
+//       }
+//     ]
+//   }
+// ]
+
 const reducer = (state: any, action: any) => {
   let newState = [];
   switch (action.type) {
